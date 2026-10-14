@@ -1,0 +1,1234 @@
+{
+ "term": "202701",
+ "source": "sample (fictional data for demos and tests)",
+ "fetched_at": "2026-10-14T00:00:00",
+ "courses": [
+  {
+   "course_id": "CMSC216",
+   "title": "Introduction to Computer Systems",
+   "credits": 4,
+   "sections": [
+    {
+     "section_id": "0101",
+     "instructors": [
+      "Avery Quill"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "10:00am",
+       "end": "10:50am",
+       "building": "IRB",
+       "room": "0324",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Th",
+       "start": "8:00am",
+       "end": "8:50am",
+       "building": "CSI",
+       "room": "1337",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 1,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0102",
+     "instructors": [
+      "Avery Quill"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "10:00am",
+       "end": "10:50am",
+       "building": "IRB",
+       "room": "0324",
+       "kind": "Lecture"
+      },
+      {
+       "days": "F",
+       "start": "11:00am",
+       "end": "11:50am",
+       "building": "CSI",
+       "room": "2812",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0103",
+     "instructors": [
+      "Avery Quill"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "10:00am",
+       "end": "10:50am",
+       "building": "IRB",
+       "room": "0324",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "11:00am",
+       "end": "11:50am",
+       "building": "CSI",
+       "room": "1607",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 0,
+     "waitlist": 19,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0201",
+     "instructors": [
+      "Morgan Vale"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "IRB",
+       "room": "0324",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Tu",
+       "start": "8:00am",
+       "end": "8:50am",
+       "building": "AVW",
+       "room": "1290",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 0,
+     "waitlist": 8,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0202",
+     "instructors": [
+      "Morgan Vale"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "IRB",
+       "room": "0324",
+       "kind": "Lecture"
+      },
+      {
+       "days": "F",
+       "start": "10:00am",
+       "end": "10:50am",
+       "building": "IRB",
+       "room": "1582",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 0,
+     "waitlist": 18,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0203",
+     "instructors": [
+      "Morgan Vale"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "IRB",
+       "room": "0324",
+       "kind": "Lecture"
+      },
+      {
+       "days": "F",
+       "start": "12:00pm",
+       "end": "12:50pm",
+       "building": "AVW",
+       "room": "1869",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 30,
+     "seats_open": 0,
+     "waitlist": 19,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0301",
+     "instructors": [
+      "Avery Quill"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "12:30pm",
+       "end": "1:45pm",
+       "building": "ESJ",
+       "room": "0202",
+       "kind": "Lecture"
+      },
+      {
+       "days": "W",
+       "start": "9:00am",
+       "end": "9:50am",
+       "building": "AVW",
+       "room": "1344",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 5,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0302",
+     "instructors": [
+      "Avery Quill"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "12:30pm",
+       "end": "1:45pm",
+       "building": "ESJ",
+       "room": "0202",
+       "kind": "Lecture"
+      },
+      {
+       "days": "F",
+       "start": "11:00am",
+       "end": "11:50am",
+       "building": "IRB",
+       "room": "2386",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 12,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0303",
+     "instructors": [
+      "Avery Quill"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "12:30pm",
+       "end": "1:45pm",
+       "building": "ESJ",
+       "room": "0202",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Th",
+       "start": "3:00pm",
+       "end": "3:50pm",
+       "building": "IRB",
+       "room": "2099",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 36,
+     "seats_open": 0,
+     "waitlist": 6,
+     "holdfile": 0,
+     "delivery": "f2f"
+    }
+   ]
+  },
+  {
+   "course_id": "CMSC250",
+   "title": "Discrete Structures",
+   "credits": 4,
+   "sections": [
+    {
+     "section_id": "0101",
+     "instructors": [
+      "Riley Thorne"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "9:30am",
+       "end": "10:45am",
+       "building": "IRB",
+       "room": "1116",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "12:00pm",
+       "end": "12:50pm",
+       "building": "EGR",
+       "room": "2938",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 1,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0102",
+     "instructors": [
+      "Riley Thorne"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "9:30am",
+       "end": "10:45am",
+       "building": "IRB",
+       "room": "1116",
+       "kind": "Lecture"
+      },
+      {
+       "days": "W",
+       "start": "9:00am",
+       "end": "9:50am",
+       "building": "CSI",
+       "room": "1722",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 0,
+     "waitlist": 11,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0103",
+     "instructors": [
+      "Riley Thorne"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "9:30am",
+       "end": "10:45am",
+       "building": "IRB",
+       "room": "1116",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Th",
+       "start": "2:00pm",
+       "end": "2:50pm",
+       "building": "CSI",
+       "room": "2385",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 12,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0201",
+     "instructors": [
+      "Jordan Pike"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "2:00pm",
+       "end": "3:15pm",
+       "building": "ESJ",
+       "room": "0224",
+       "kind": "Lecture"
+      },
+      {
+       "days": "W",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "EGR",
+       "room": "2968",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 5,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0202",
+     "instructors": [
+      "Jordan Pike"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "2:00pm",
+       "end": "3:15pm",
+       "building": "ESJ",
+       "room": "0224",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "9:00am",
+       "end": "9:50am",
+       "building": "AVW",
+       "room": "1366",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 8,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0203",
+     "instructors": [
+      "Jordan Pike"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "2:00pm",
+       "end": "3:15pm",
+       "building": "ESJ",
+       "room": "0224",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "12:00pm",
+       "end": "12:50pm",
+       "building": "EGR",
+       "room": "2680",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 1,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0301",
+     "instructors": [
+      "Riley Thorne"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "9:00am",
+       "end": "9:50am",
+       "building": "IRB",
+       "room": "0318",
+       "kind": "Lecture"
+      },
+      {
+       "days": "W",
+       "start": "8:00am",
+       "end": "8:50am",
+       "building": "AVW",
+       "room": "1579",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 36,
+     "seats_open": 0,
+     "waitlist": 20,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0302",
+     "instructors": [
+      "Riley Thorne"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "9:00am",
+       "end": "9:50am",
+       "building": "IRB",
+       "room": "0318",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Th",
+       "start": "8:00am",
+       "end": "8:50am",
+       "building": "CSI",
+       "room": "2729",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 36,
+     "seats_open": 0,
+     "waitlist": 8,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0303",
+     "instructors": [
+      "Riley Thorne"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "9:00am",
+       "end": "9:50am",
+       "building": "IRB",
+       "room": "0318",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Th",
+       "start": "3:00pm",
+       "end": "3:50pm",
+       "building": "CSI",
+       "room": "2745",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 30,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    }
+   ]
+  },
+  {
+   "course_id": "MATH240",
+   "title": "Introduction to Linear Algebra",
+   "credits": 4,
+   "sections": [
+    {
+     "section_id": "0101",
+     "instructors": [
+      "Casey Lund"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "8:00am",
+       "end": "8:50am",
+       "building": "MTH",
+       "room": "0101",
+       "kind": "Lecture"
+      },
+      {
+       "days": "F",
+       "start": "12:00pm",
+       "end": "12:50pm",
+       "building": "MTH",
+       "room": "2240",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 12,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0102",
+     "instructors": [
+      "Casey Lund"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "8:00am",
+       "end": "8:50am",
+       "building": "MTH",
+       "room": "0101",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Th",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "EGR",
+       "room": "1439",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 0,
+     "waitlist": 5,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0201",
+     "instructors": [
+      "Sam Okafor"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "11:00am",
+       "end": "11:50am",
+       "building": "PHY",
+       "room": "1412",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Tu",
+       "start": "10:00am",
+       "end": "10:50am",
+       "building": "MTH",
+       "room": "1846",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 30,
+     "seats_open": 0,
+     "waitlist": 16,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0202",
+     "instructors": [
+      "Sam Okafor"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "11:00am",
+       "end": "11:50am",
+       "building": "PHY",
+       "room": "1412",
+       "kind": "Lecture"
+      },
+      {
+       "days": "W",
+       "start": "12:00pm",
+       "end": "12:50pm",
+       "building": "MTH",
+       "room": "2612",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 30,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0301",
+     "instructors": [
+      "Drew Ellison"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "11:00am",
+       "end": "12:15pm",
+       "building": "MTH",
+       "room": "0105",
+       "kind": "Lecture"
+      },
+      {
+       "days": "F",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "MTH",
+       "room": "2707",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0302",
+     "instructors": [
+      "Drew Ellison"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "11:00am",
+       "end": "12:15pm",
+       "building": "MTH",
+       "room": "0105",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Th",
+       "start": "2:00pm",
+       "end": "2:50pm",
+       "building": "PHY",
+       "room": "2740",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0401",
+     "instructors": [
+      "Casey Lund"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "3:30pm",
+       "end": "4:45pm",
+       "building": "ESJ",
+       "room": "2204",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "11:00am",
+       "end": "11:50am",
+       "building": "MTH",
+       "room": "1764",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 30,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0402",
+     "instructors": [
+      "Casey Lund"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "3:30pm",
+       "end": "4:45pm",
+       "building": "ESJ",
+       "room": "2204",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "EGR",
+       "room": "1719",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 0,
+     "waitlist": 1,
+     "holdfile": 0,
+     "delivery": "f2f"
+    }
+   ]
+  },
+  {
+   "course_id": "STAT400",
+   "title": "Applied Probability and Statistics I",
+   "credits": 3,
+   "sections": [
+    {
+     "section_id": "0101",
+     "instructors": [
+      "Pat Rourke"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "8:00am",
+       "end": "9:15am",
+       "building": "MTH",
+       "room": "0303",
+       "kind": "Lecture"
+      },
+      {
+       "days": "F",
+       "start": "9:00am",
+       "end": "9:50am",
+       "building": "PLS",
+       "room": "2641",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 24,
+     "seats_open": 0,
+     "waitlist": 7,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0102",
+     "instructors": [
+      "Pat Rourke"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "8:00am",
+       "end": "9:15am",
+       "building": "MTH",
+       "room": "0303",
+       "kind": "Lecture"
+      },
+      {
+       "days": "Tu",
+       "start": "12:00pm",
+       "end": "12:50pm",
+       "building": "PLS",
+       "room": "1603",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 36,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0201",
+     "instructors": [
+      "Lee Marsh"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "2:00pm",
+       "end": "2:50pm",
+       "building": "PHY",
+       "room": "1402",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "3:00pm",
+       "end": "3:50pm",
+       "building": "PLS",
+       "room": "2377",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 40,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0202",
+     "instructors": [
+      "Lee Marsh"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "2:00pm",
+       "end": "2:50pm",
+       "building": "PHY",
+       "room": "1402",
+       "kind": "Lecture"
+      },
+      {
+       "days": "M",
+       "start": "10:00am",
+       "end": "10:50am",
+       "building": "MTH",
+       "room": "2184",
+       "kind": "Discussion"
+      }
+     ],
+     "seats_total": 36,
+     "seats_open": 8,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    }
+   ]
+  },
+  {
+   "course_id": "ENGL101",
+   "title": "Academic Writing",
+   "credits": 3,
+   "sections": [
+    {
+     "section_id": "0001",
+     "instructors": [
+      "Kai Brennan"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "3:00pm",
+       "end": "3:50pm",
+       "building": "TYD",
+       "room": "2181",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 5,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0002",
+     "instructors": [
+      "Kai Brennan"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "JMZ",
+       "room": "1710",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 8,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0003",
+     "instructors": [
+      "Quinn Adair"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "11:00am",
+       "end": "12:15pm",
+       "building": "JMZ",
+       "room": "1851",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 8,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0004",
+     "instructors": [
+      "Robin Hale"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "5:00pm",
+       "end": "6:15pm",
+       "building": "JMZ",
+       "room": "2209",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 1,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0005",
+     "instructors": [
+      "Robin Hale"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "2:00pm",
+       "end": "3:15pm",
+       "building": "JMZ",
+       "room": "1499",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 8,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0006",
+     "instructors": [
+      "Ari Solis"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "2:00pm",
+       "end": "3:15pm",
+       "building": "TYD",
+       "room": "1509",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 12,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0007",
+     "instructors": [
+      "Kai Brennan"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "8:00am",
+       "end": "9:15am",
+       "building": "TWS",
+       "room": "1672",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 1,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0008",
+     "instructors": [
+      "Quinn Adair"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "3:00pm",
+       "end": "3:50pm",
+       "building": "KEY",
+       "room": "1815",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 0,
+     "waitlist": 20,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0009",
+     "instructors": [
+      "Robin Hale"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "KEY",
+       "room": "1502",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 0,
+     "waitlist": 4,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0010",
+     "instructors": [
+      "Kai Brennan"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "1:00pm",
+       "end": "1:50pm",
+       "building": "KEY",
+       "room": "1804",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0011",
+     "instructors": [
+      "Kai Brennan"
+     ],
+     "meetings": [
+      {
+       "days": "",
+       "start": null,
+       "end": null,
+       "building": "ONLINE",
+       "room": null,
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 4,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "online"
+    }
+   ]
+  },
+  {
+   "course_id": "ENGL102",
+   "title": "Critical Methods in the Study of Literature",
+   "credits": 3,
+   "sections": [
+    {
+     "section_id": "0001",
+     "instructors": [
+      "Robin Hale"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "3:30pm",
+       "end": "4:45pm",
+       "building": "TLF",
+       "room": "1465",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 3,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0002",
+     "instructors": [
+      "Ari Solis"
+     ],
+     "meetings": [
+      {
+       "days": "MWF",
+       "start": "2:00pm",
+       "end": "2:50pm",
+       "building": "TLF",
+       "room": "1273",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 0,
+     "waitlist": 13,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0003",
+     "instructors": [
+      "Robin Hale"
+     ],
+     "meetings": [
+      {
+       "days": "TuTh",
+       "start": "12:30pm",
+       "end": "1:45pm",
+       "building": "TWS",
+       "room": "2053",
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 0,
+     "waitlist": 5,
+     "holdfile": 0,
+     "delivery": "f2f"
+    },
+    {
+     "section_id": "0004",
+     "instructors": [
+      "Robin Hale"
+     ],
+     "meetings": [
+      {
+       "days": "",
+       "start": null,
+       "end": null,
+       "building": "ONLINE",
+       "room": null,
+       "kind": "Lecture"
+      }
+     ],
+     "seats_total": 19,
+     "seats_open": 4,
+     "waitlist": 0,
+     "holdfile": 0,
+     "delivery": "online"
+    }
+   ]
+  }
+ ]
+}
