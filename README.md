@@ -18,14 +18,24 @@ Things it does that Venus doesn't:
 
 ## Install
 
-Requires Python 3.10+.
+Requires Python 3.10+. Most Linux distributions (Arch, Debian/Ubuntu, Fedora) and Homebrew Python
+block a plain system-wide `pip install` (the "externally-managed-environment" error), so use one of these:
 
 ```sh
-pip install .            # or: pip install -e .  while developing
+# Option 1: pipx (simplest; puts `umd-sched` on your PATH)
+sudo pacman -S python-pipx        # Arch; or: brew install pipx / apt install pipx
+pipx install .
 umd-sched --help
-```
 
-You can also run it without installing: `python -m umdsched ...`.
+# Option 2: a virtual environment in the repo
+python -m venv .venv
+.venv/bin/pip install -e .
+.venv/bin/umd-sched --help        # or `source .venv/bin/activate` first, then `umd-sched`
+
+# Option 3: no install, using your distro's packages
+sudo pacman -S python-requests python-beautifulsoup4 python-lxml
+python -m umdsched --help         # run from the repo directory
+```
 
 ## Quick start
 
