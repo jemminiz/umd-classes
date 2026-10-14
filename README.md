@@ -246,6 +246,11 @@ umd-sched fetch CMSC216 MATH240 -o spring.json   # save data to share or use off
 python -m unittest discover -s tests
 ```
 
+The tests need `requests` and `beautifulsoup4` in whichever Python runs them. pipx installs those
+into its own isolated environment, so either install them for your system Python
+(`sudo pacman -S python-requests python-beautifulsoup4`) or run the tests with pipx's interpreter:
+`~/.local/share/pipx/venvs/umd-sched/bin/python -m unittest discover -s tests`.
+
 The tests use HTML fixtures shaped like Testudo's pages, so they need no network access.
 
 How the search works: it backtracks over courses, using precomputed bitmasks of which sections are
