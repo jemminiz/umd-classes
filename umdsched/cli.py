@@ -268,7 +268,8 @@ def cmd_build(args) -> int:
 
         start, end = approx_term_dates(term)
         start, end = args.term_start or start, args.term_end or end
-        args.ics.write_text(schedule_to_ics(result.schedules[args.pick - 1], start, end, term_name(term)))
+        ics = schedule_to_ics(result.schedules[args.pick - 1], start, end, term_name(term))
+        args.ics.write_text(ics, encoding="utf-8", newline="")  # the text already has CRLF line ends
         approx = "" if args.term_start and args.term_end else " (approximate term dates; set --term-start/--term-end)"
         print(f"\nWrote schedule #{args.pick} to {args.ics}: {start} to {end}{approx}", file=sys.stderr)
     return 0 if result.schedules else 1
@@ -340,7 +341,7 @@ def cmd_buildings(args) -> int:
             return _die(f"couldn't download buildings from umd.io: {e}")
         path = default_config_dir() / "buildings.json"
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(data, indent=1))
+        path.write_text(json.dumps(data, indent=1), encoding="utf-8")
         print(f"Saved {len(data)} buildings to {path}; they'll be used automatically.")
         return 0
     model = _walk_model()
@@ -366,13 +367,17 @@ def cmd_fetch(args) -> int:
 def cmd_init_config(args) -> int:
     if args.path.exists() and not args.force:
         return _die(f"{args.path} already exists (use --force to overwrite)")
-    args.path.write_text(SAMPLE_CONFIG.format(term=default_term()))
+    args.path.write_text(SAMPLE_CONFIG.format(term=default_term()), encoding="utf-8")
     print(f"Wrote {args.path}. Edit it, then run: umd-sched build -c {args.path}")
     return 0
 
 
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
+    for stream in (sys.stdout, sys.stderr):
+        # e.g. Windows output redirected to a file uses the legacy code page
+        if hasattr(stream, "reconfigure") and (stream.encoding or "").lower().replace("-", "") != "utf8":
+            stream.reconfigure(errors="replace")
     if argv and argv[0] not in COMMANDS and argv[0] not in ("-h", "--help", "--version"):
         argv.insert(0, "build")
     parser = build_parser()

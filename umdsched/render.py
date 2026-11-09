@@ -3,14 +3,24 @@
 from __future__ import annotations
 
 import shutil
+import sys
 
 from umdsched.models import Course
 from umdsched.scheduler import Schedule
 from umdsched.timeutil import DAY_CODES, format_days, format_duration, format_time
 
 
+def _glyph(fancy: str, plain: str) -> str:
+    """`fancy` if the terminal's encoding can show it, else `plain`."""
+    try:
+        fancy.encode(sys.stdout.encoding or "ascii")
+        return fancy
+    except (UnicodeEncodeError, LookupError):
+        return plain
+
+
 def _trunc(s: str, n: int) -> str:
-    return s if len(s) <= n else s[: n - 1] + "…"
+    return s if len(s) <= n else s[: n - 1] + _glyph("…", "~")
 
 
 def schedule_summary(s: Schedule) -> str:
@@ -37,7 +47,7 @@ def render_schedule(i: int, s: Schedule, *, ratings: dict | None = None, grid: b
         if ratings is not None:
             rs = [ratings.get(n) for n in o.instructors]
             rs = [r for r in rs if r is not None]
-            prof += f" (★{sum(rs) / len(rs):.1f})" if rs else " (★?)"
+            prof += f" ({_glyph('★', 'rating ')}{sum(rs) / len(rs):.1f})" if rs else f" ({_glyph('★', 'rating ')}?)"
         lines.append(f"    {o.course_id:<9}{_trunc(secs, 14):<15}{_trunc(prof, 30):<31}{o.best.seats_str()}")
         for m in o.meetings:
             kind = "" if m.kind == "Lecture" else f" [{m.kind}]"
@@ -92,9 +102,9 @@ def render_grid(s: Schedule, *, step: int = 30) -> str:
                     if m.start >= t:  # first slot of this meeting
                         cell = cid
                     elif m.start >= t - step:
-                        cell = m.where() if m.building else "▒" * (width - 2)
+                        cell = m.where() if m.building else _glyph("▒", "#") * (width - 2)
                     else:
-                        cell = "▒" * (width - 2)
+                        cell = _glyph("▒", "#") * (width - 2)
                     break
             cells.append(f"{_trunc(cell, width):<{width}}")
         out.append(f"  {format_time(t):>7} " + "|".join(cells))
@@ -107,7 +117,7 @@ def render_course(course: Course, *, ratings: dict | None = None) -> str:
         prof = sec.instructor_str()
         if ratings is not None:
             rs = [r for r in (ratings.get(n) for n in sec.instructors) if r is not None]
-            prof += f" (★{sum(rs) / len(rs):.1f})" if rs else " (★?)"
+            prof += f" ({_glyph('★', 'rating ')}{sum(rs) / len(rs):.1f})" if rs else f" ({_glyph('★', 'rating ')}?)"
         lines.append(f"  {sec.section_id:<6}{_trunc(prof, 34):<35}{sec.seats_str():<26}{sec.delivery}")
         for m in sec.meetings:
             kind = "" if m.kind == "Lecture" else f" [{m.kind}]"

@@ -16,7 +16,7 @@ class RatingCache:
         self.path = Path(cache_dir) / "planetterp-ratings.json"
         self.offline = offline
         try:
-            self.data: dict = json.loads(self.path.read_text())
+            self.data: dict = json.loads(self.path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             self.data = {}
 
@@ -45,7 +45,7 @@ class RatingCache:
                     self.data[name] = {"r": rating, "t": time.time()}
             try:
                 self.path.parent.mkdir(parents=True, exist_ok=True)
-                self.path.write_text(json.dumps(self.data))
+                self.path.write_text(json.dumps(self.data), encoding="utf-8")
             except OSError:
                 pass
         return {n: (self.data.get(n) or {}).get("r") for n in names}

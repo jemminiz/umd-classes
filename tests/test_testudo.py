@@ -10,7 +10,7 @@ FIXTURES = Path(__file__).parent / "fixtures"
 class ParseSearchPage(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.courses = {c.course_id: c for c in testudo.parse_courses((FIXTURES / "testudo_search.html").read_text())}
+        cls.courses = {c.course_id: c for c in testudo.parse_courses((FIXTURES / "testudo_search.html").read_text(encoding="utf-8"))}
 
     def test_courses_and_titles(self):
         self.assertEqual(set(self.courses), {"CMSC216", "CMSC216H"})
@@ -51,7 +51,7 @@ class ParseSearchPage(unittest.TestCase):
 
 class ParseSectionsEndpoint(unittest.TestCase):
     def test_sections_fragment(self):
-        by_course = testudo.parse_sections_page((FIXTURES / "testudo_sections.html").read_text())
+        by_course = testudo.parse_sections_page((FIXTURES / "testudo_sections.html").read_text(encoding="utf-8"))
         (sec,) = by_course["MATH240"]
         self.assertEqual(sec.section_id, "0111")
         self.assertEqual((sec.seats_total, sec.seats_open, sec.waitlist), (30, 4, 0))

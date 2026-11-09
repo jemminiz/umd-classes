@@ -1,5 +1,6 @@
 import datetime as dt
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -229,7 +230,7 @@ class CommandLine(unittest.TestCase):
         with tempfile.TemporaryDirectory() as cache:
             return subprocess.run(
                 [sys.executable, "-m", "umdsched", *args],
-                cwd=ROOT, capture_output=True, text=True, env={"XDG_CACHE_HOME": cache, "XDG_CONFIG_HOME": cache, "PATH": ""},
+                cwd=ROOT, capture_output=True, text=True, env={**os.environ, "XDG_CACHE_HOME": cache, "XDG_CONFIG_HOME": cache},
             )
 
     def test_build_text_and_json(self):
@@ -250,7 +251,9 @@ class CommandLine(unittest.TestCase):
             self.assertEqual(r.returncode, 0, r.stderr)
             r = self.cli("-c", str(cfg), "--data", "examples/sample-data.json", "--offline", "--ics", str(ics), "--term", "spring2027")
             self.assertEqual(r.returncode, 0, r.stderr)
-            self.assertIn("BEGIN:VEVENT", ics.read_text())
+            raw = ics.read_bytes()
+            self.assertIn(b"BEGIN:VEVENT", raw)
+            self.assertNotIn(b"\r\r\n", raw)
 
     def test_bad_input_is_a_clean_error(self):
         r = self.cli("CS216", "--data", "examples/sample-data.json")

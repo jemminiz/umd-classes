@@ -16,17 +16,21 @@ class DataError(Exception):
 
 
 def default_cache_dir() -> Path:
-    base = os.environ.get("XDG_CACHE_HOME") or Path.home() / ".cache"
-    return Path(base) / "umd-sched"
+    base = os.environ.get("XDG_CACHE_HOME")
+    if not base and os.name == "nt":
+        base = os.environ.get("LOCALAPPDATA")
+    return Path(base or Path.home() / ".cache") / "umd-sched"
 
 
 def default_config_dir() -> Path:
-    base = os.environ.get("XDG_CONFIG_HOME") or Path.home() / ".config"
-    return Path(base) / "umd-sched"
+    base = os.environ.get("XDG_CONFIG_HOME")
+    if not base and os.name == "nt":
+        base = os.environ.get("APPDATA")
+    return Path(base or Path.home() / ".config") / "umd-sched"
 
 
 def load_data_file(path: Path) -> dict[str, Course]:
-    data = json.loads(Path(path).read_text())
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
     courses = data["courses"] if isinstance(data, dict) else data
     return {c.course_id: c for c in (Course.from_dict(d) for d in courses)}
 
@@ -38,7 +42,7 @@ def save_data_file(path: Path, term: str, courses: list[Course], source: str) ->
         "fetched_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "courses": [c.to_dict() for c in courses],
     }
-    Path(path).write_text(json.dumps(payload, indent=1))
+    Path(path).write_text(json.dumps(payload, indent=1), encoding="utf-8")
 
 
 class CourseLoader:
@@ -77,7 +81,7 @@ class CourseLoader:
         if not path.exists():
             return None
         try:
-            data = json.loads(path.read_text())
+            data = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             return None
         if not ignore_age and time.time() - data.get("fetched_at", 0) > self.ttl:
@@ -87,7 +91,9 @@ class CourseLoader:
     def _write_cache(self, cid: str, course: Course) -> None:
         try:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
-            self._cache_path(cid).write_text(json.dumps({"fetched_at": time.time(), "course": course.to_dict()}))
+            self._cache_path(cid).write_text(
+                json.dumps({"fetched_at": time.time(), "course": course.to_dict()}), encoding="utf-8"
+            )
         except OSError:
             pass
 

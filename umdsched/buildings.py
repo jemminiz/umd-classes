@@ -90,7 +90,7 @@ class WalkModel:
         Accepts {"CODE": [lat, lon]}, {"CODE": {"name":..,"lat":..,"lon":..}},
         or a umd.io-style list of {"code","name","lat","long"} objects.
         """
-        data = json.loads(Path(path).read_text())
+        data = json.loads(Path(path).read_text(encoding="utf-8"))
         count = 0
         items = data.items() if isinstance(data, dict) else ((d.get("code"), d) for d in data)
         for code, val in items:

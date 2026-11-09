@@ -37,6 +37,42 @@ sudo pacman -S python-requests python-beautifulsoup4 python-lxml
 python -m umdsched --help         # run from the repo directory
 ```
 
+### Windows
+
+1. Install Python 3.10 or newer, either from [python.org](https://www.python.org/downloads/windows/)
+   (tick **"Add python.exe to PATH"** in the installer) or with `winget install Python.Python.3.13`.
+   Then open a **new** PowerShell or Windows Terminal window.
+2. Get the code: `git clone` the repository, or download it as a ZIP from GitHub and extract it.
+   Then `cd` into the folder.
+3. Install with pipx:
+
+   ```powershell
+   py -m pip install --user pipx
+   py -m pipx ensurepath        # then close and reopen the terminal
+   pipx install .
+   umd-sched show CMSC216
+   ```
+
+   Or use a virtual environment instead:
+
+   ```powershell
+   py -m venv .venv
+   .venv\Scripts\pip install -e .
+   .venv\Scripts\umd-sched show CMSC216
+   ```
+
+   If PowerShell refuses to run `.venv\Scripts\Activate.ps1`, you don't need it: call
+   `.venv\Scripts\umd-sched` directly as shown.
+
+Everything else in this README works the same on Windows, with a few differences:
+
+- **Quoting:** put specs containing `|` in double quotes, as in `"ENGL101|ENGL102"`. That works in
+  both PowerShell and cmd. Or use `/` (`ENGL101/ENGL102`), which needs no quotes.
+- **Storage:** the cache is in `%LOCALAPPDATA%\umd-sched`, and downloaded building coordinates are
+  in `%APPDATA%\umd-sched`.
+- **Display:** use Windows Terminal (the default on Windows 11) for the best output. On older
+  consoles, symbols such as the grid shading are replaced with plain ASCII.
+
 ## Quick start
 
 ```sh
@@ -224,7 +260,7 @@ umd-sched fetch CMSC216 MATH240 -o spring.json   # save data to share or use off
 - **Source**: Testudo's Schedule of Classes, read from its HTML pages. If Testudo changes its markup,
   `--source umdio` uses the community [umd.io](https://umd.io) API instead. umd.io can lag behind on
   seat counts.
-- **Cache**: responses are cached in `~/.cache/umd-sched` for 30 minutes, since seat counts change
+- **Cache**: responses are cached in `~/.cache/umd-sched` (Windows: `%LOCALAPPDATA%\umd-sched`) for 30 minutes, since seat counts change
   constantly during registration. `--refresh` forces a fresh download. `--offline` uses the cache at
   any age, and `--cache-minutes` changes the lifetime. If the network fails, stale cached data is used
   as a fallback.
